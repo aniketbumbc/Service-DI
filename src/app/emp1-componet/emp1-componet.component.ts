@@ -1,18 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import{EmployeeService}from "../employee.service";
+import { EmployeeService } from "../employee.service";
+
 
 @Component({
   selector: 'app-emp1-componet',
-  templateUrl: './emp1-componet.component.html',
-  styleUrls: ['./emp1-componet.component.css']
+  template: `
+  <h2>Employee List and name </h2>
+  <h3>{{errorMsg}}</h3>
+  <ul *ngFor="let emplo of employee">
+    <li>
+    {{emplo.id}}
+     {{emplo.name}} 
+ 
+     
+     </li>
+  </ul>
+`,
+  styles: []
+
 })
 export class Emp1ComponetComponent implements OnInit {
-employee=[];
-  constructor(private  _empservice:EmployeeService) { }  // local variable give instances of employee services 
-
+  public employee = [];
+  public errorMsg;
+  constructor(public _empservice: EmployeeService) { }  // local variable give instances of employee services 
   ngOnInit() {
 
-    this.employee=this._empservice.getEmployee();
+    this.employee = this._empservice.getEmployee();
   }
 
 }

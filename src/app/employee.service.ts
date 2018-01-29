@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class EmployeeService {
-
-  constructor() { }
   getEmployee() {
     return [
       { "id": 1, "name": "Aniket", "city": "Baltimore" },

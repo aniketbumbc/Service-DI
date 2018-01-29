@@ -1,3 +1,7 @@
-<p>
-  emp1-componet works!
-</p>
+<h3>
+  Employee List
+</h3>
+
+<ul *ngFor="let emp of employee">
+  <li>{{emp.id}} {{emp.name}} {{emp.city}}</li>
+</ul>
