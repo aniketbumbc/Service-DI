@@ -8,14 +8,14 @@ import{EmpInfoService} from '../emp-info.service';
   styleUrls: ['./emp-info.component.css']
 })
 export class EmpInfoComponent implements OnInit {
-empProfile:Iporfile;
+//empProfile:Iporfile;
 ProfileList:Iporfile[];
   constructor(private _empService:EmpInfoService) { 
   }
 
   ngOnInit() {
     this.ProfileList=this._empService.getProfile();
-    this.empProfile=this.ProfileList[0];
+    //this.empProfile=this.ProfileList[0];
   }
 
 }

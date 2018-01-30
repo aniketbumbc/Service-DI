@@ -3,7 +3,7 @@ import {Iporfile} from './Iprofile';
 
 @Injectable()
 export class EmpInfoService {
-getProfile():Iporfile[]{
+getProfile(){
   return[{
     Name:'Bunny',
     Age:23,
