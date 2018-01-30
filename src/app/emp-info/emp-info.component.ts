@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Iporfile}from  '../Iprofile';
 
 @Component({
   selector: 'app-emp-info',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./emp-info.component.css']
 })
 export class EmpInfoComponent implements OnInit {
-
+empProfile:Iporfile;
   constructor() { }
 
   ngOnInit() {
