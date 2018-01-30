@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Iporfile}from  '../Iprofile';
+import{EmpInfoService} from '../emp-info.service';
 
 @Component({
   selector: 'app-emp-info',
@@ -8,9 +9,13 @@ import {Iporfile}from  '../Iprofile';
 })
 export class EmpInfoComponent implements OnInit {
 empProfile:Iporfile;
-  constructor() { }
+ProfileList:Iporfile[];
+  constructor(private _empService:EmpInfoService) { 
+  }
 
   ngOnInit() {
+    this.ProfileList=this._empService.getProfile();
+    this.empProfile=this.ProfileList[0];
   }
 
 }
